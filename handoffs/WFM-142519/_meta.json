@@ -1,20 +1,25 @@
 {
   "attachments": {
     "1785950893782929": {
-      "bytes_written": 10537,
+      "bytes_written": 27742,
       "created": "2026-08-05T22:58:13.782929",
       "filename": "WFM-142519_handoff.md",
       "local_path": "handoffs/WFM-142519/WFM-142519_handoff.md",
-      "sha256": "07a8a55f14ce0c9da85a041f65bc600382bfeaac4d12ca02cb896a076d841521",
-      "size": 10537,
-      "skill": "wst-defect-triage",
-      "revision": "R1",
-      "last_updated": "2026-08-05T22:58:13.782929",
+      "sha256": "64d9705c7fd6fbfe4fe522a7d7948c70a17386ffd037b0baa99746ea5b4d22d9",
+      "size": 27742,
+      "skill": "wst-defect-fix",
+      "revision": "F1",
+      "last_updated": "2026-08-05T23:00:35.698598",
       "update_history": [
         {
           "skill": "wst-defect-triage",
           "revision": "R1",
           "timestamp": "2026-08-05T22:58:13.782929"
+        },
+        {
+          "skill": "wst-defect-fix",
+          "revision": "F1",
+          "timestamp": "2026-08-05T23:00:35.698598"
         }
       ]
     }
@@ -25,6 +30,6 @@
     "WST_SKILL_BASED"
   ],
   "status": "",
-  "summary": "Roster Add panel blank space — client-side showAddTemplateTab/updatePageHeight ordering bug",
-  "updated": "2026-08-05T22:58:13.782929"
+  "summary": "Fix captured: roster Add panel height reorder in 5 renderer JS files",
+  "updated": "2026-08-05T23:00:35.698598"
 }
