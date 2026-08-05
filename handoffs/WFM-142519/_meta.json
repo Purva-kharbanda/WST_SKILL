@@ -1,0 +1,34 @@
+{
+  "attachments": {
+    "1785906244678448": {
+      "bytes_written": 9879,
+      "created": "2026-08-05T10:34:04.678448",
+      "filename": "WFM-142519-20260805-1033.md",
+      "local_path": "handoffs/WFM-142519/WFM-142519-20260805-1033.md",
+      "sha256": "62134d5ad083a68de100324d97d0ad8571236469fbdfde5fd7fe531f4e255938",
+      "size": 9879,
+      "skill": "wst-defect-triage",
+      "revision": "R1"
+    }
+  },
+  "key": "WFM-142519",
+  "label_added_iso": null,
+  "labels": [
+    "WST_SKILL_BASED"
+  ],
+  "status": "",
+  "summary": "Dev story WFM-130904 — Roster Add panel blank space at bottom",
+  "updated": "2026-08-05T10:34:04.678448",
+  "tokens": {
+    "wst-defect-triage": {
+      "R1": {
+        "input": 16778,
+        "output": 5872,
+        "total": 22650,
+        "cost_usd": 0.151002,
+        "model": "default",
+        "timestamp": "2026-08-05T10:34:04.678448"
+      }
+    }
+  }
+}
