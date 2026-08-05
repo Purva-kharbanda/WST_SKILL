@@ -1,0 +1,42 @@
+{
+  "attachments": {
+    "1785907910659743": {
+      "bytes_written": 11676,
+      "created": "2026-08-05T11:01:50.659743",
+      "filename": "WFM-142519_handoff.md",
+      "local_path": "handoffs/WFM-142519/WFM-142519_handoff.md",
+      "sha256": "18b5573bec957a7d2d90ab8d3506098fd800b9f017a731d4e5e07afa7e3804a2",
+      "size": 11676,
+      "skill": "wst-defect-triage",
+      "revision": "R2",
+      "last_updated": "2026-08-05T11:01:50.659743",
+      "update_history": [
+        {
+          "skill": "wst-defect-triage",
+          "revision": "R2",
+          "timestamp": "2026-08-05T11:01:50.659743"
+        }
+      ]
+    }
+  },
+  "key": "WFM-142519",
+  "label_added_iso": null,
+  "labels": [
+    "WST_SKILL_BASED"
+  ],
+  "status": "",
+  "summary": "Dev story - WFM-130904 - Roster blank space at bottom when adding new record",
+  "updated": "2026-08-05T11:01:50.659743",
+  "tokens": {
+    "wst-defect-triage": {
+      "R2": {
+        "input": 51430,
+        "output": 14824,
+        "total": 66254,
+        "cost_usd": 0.37665,
+        "model": "composer-2.5-fast",
+        "timestamp": "2026-08-05T11:01:50.659743"
+      }
+    }
+  }
+}
