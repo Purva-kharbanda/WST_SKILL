@@ -1,0 +1,16 @@
+{
+  "ticket_id": "WFM-142519",
+  "updated": "2026-08-05T11:15:32.086401",
+  "skills": {
+    "wst-defect-triage": {
+      "R3": {
+        "input": 8812,
+        "output": 8,
+        "total": 8829,
+        "cost_usd": 0.079389,
+        "model": "composer-2.5-fast",
+        "timestamp": "2026-08-05T11:15:32.086401"
+      }
+    }
+  }
+}
