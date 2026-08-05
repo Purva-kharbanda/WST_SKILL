@@ -1,15 +1,15 @@
 {
   "attachments": {
     "1785952396204149": {
-      "bytes_written": 12894,
+      "bytes_written": 16606,
       "created": "2026-08-05T23:23:16.204149",
       "filename": "WFM-142519_handoff.md",
       "local_path": "handoffs/WFM-142519/WFM-142519_handoff.md",
-      "sha256": "78533bb71072c46a94f25f3c269f6335bfff469c48d1ad78a53e47899d4143b0",
-      "size": 12894,
+      "sha256": "a3ad86012c1c5716eb18d29172685792be3cfe31b685589d0409aee129c60563",
+      "size": 16606,
       "skill": "wst-defect-triage",
-      "revision": "R1",
-      "last_updated": "2026-08-05T23:33:49.565804",
+      "revision": "R3",
+      "last_updated": "2026-08-05T23:37:31.899021",
       "update_history": [
         {
           "skill": "wst-defect-triage",
@@ -20,6 +20,11 @@
           "skill": "wst-defect-triage",
           "revision": "R1",
           "timestamp": "2026-08-05T23:33:49.565804"
+        },
+        {
+          "skill": "wst-defect-triage",
+          "revision": "R3",
+          "timestamp": "2026-08-05T23:37:31.899021"
         }
       ]
     }
@@ -30,6 +35,6 @@
     "WST_SKILL_BASED"
   ],
   "status": "",
-  "summary": "Blank space at bottom of roster tabs after Mobile Carrier field removal",
-  "updated": "2026-08-05T23:33:49.565804"
+  "summary": "Refined triage: confirmed all five affected roster tabs",
+  "updated": "2026-08-05T23:37:31.899021"
 }

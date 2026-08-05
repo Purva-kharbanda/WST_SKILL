@@ -1,25 +1,25 @@
 {
   "ticket_id": "WFM-142519",
-  "updated": "2026-08-05T23:33:49.565804",
+  "updated": "2026-08-05T23:37:31.899021",
   "pricing": {
     "input_per_1m_usd": 3.0,
     "output_per_1m_usd": 15.0
   },
   "totals": {
-    "input": 81795,
-    "output": 12556,
-    "total": 94351,
-    "cost_usd": 0.433725,
-    "revisions": 1
+    "input": 164355,
+    "output": 20015,
+    "total": 184370,
+    "cost_usd": 0.79329,
+    "revisions": 2
   },
   "skills": {
     "wst-defect-triage": {
       "totals": {
-        "input": 81795,
-        "output": 12556,
-        "total": 94351,
-        "cost_usd": 0.433725,
-        "revisions": 1
+        "input": 164355,
+        "output": 20015,
+        "total": 184370,
+        "cost_usd": 0.79329,
+        "revisions": 2
       },
       "revisions": {
         "R1": {
@@ -63,6 +63,54 @@
             "user_turns": 4,
             "agent_turns": 18,
             "tool_calls": 24,
+            "conversation_id": "e7f577ee-1cd2-465f-b5ba-5176e582cf40"
+          }
+        },
+        "R3": {
+          "summary": {
+            "input": 82560,
+            "output": 7459,
+            "total": 90019,
+            "cost_usd": 0.359565
+          },
+          "breakdown": {
+            "user_prompts": 80680,
+            "assistant_responses": 7459,
+            "skills_loaded": 0,
+            "file_search_reads": 468,
+            "code_edits": 500,
+            "shell_terminal": 912,
+            "orchestration": 0
+          },
+          "tools": {
+            "Shell": {
+              "calls": 12,
+              "tokens": 912
+            },
+            "Grep": {
+              "calls": 7,
+              "tokens": 252
+            },
+            "Read": {
+              "calls": 7,
+              "tokens": 189
+            },
+            "Glob": {
+              "calls": 1,
+              "tokens": 27
+            },
+            "Write": {
+              "calls": 1,
+              "tokens": 500
+            }
+          },
+          "metadata": {
+            "model": "gpt-5.3-codex",
+            "timestamp": "2026-08-05T23:37:31.899021",
+            "source": "transcript",
+            "user_turns": 5,
+            "agent_turns": 22,
+            "tool_calls": 28,
             "conversation_id": "e7f577ee-1cd2-465f-b5ba-5176e582cf40"
           }
         }

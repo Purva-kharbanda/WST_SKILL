@@ -267,3 +267,106 @@ User confirmed the blank space issue affects 5 additional tabs beyond Contact In
 ---
 
 <!-- /SKILL_SECTION -->
+
+<!-- SKILL_SECTION: wst-defect-triage R3 -->
+## TRIAGE (R3)
+*Updated: 2026-08-05 23:37*
+
+﻿---
+id: WFM-142519
+summary: "Dev story - WFM-130904 - Roster blank space at bottom when adding new record"
+verdict: GENUINE_BUG
+confidence: HIGH
+step_reached: KB_TER_STEP2
+input_form: jira_json
+module: RWS / Employee > Roster
+customer: COPPEL_SB CORP
+flavour: null
+affects_version: WFM.45.1.22.0.20260416.U003851
+fix_version: 45.1.22.3
+priority: Medium
+blast_radius: global
+next_owner: L3-Engineering
+sla: P3-next-sprint
+status: Refined
+version: R3
+generated: 2026-08-03T10:12:00+05:30
+last_updated: 2026-08-05T23:40:00+05:30
+duration_minutes: 10
+model: gpt-5.3-codex
+skill_version: "2.2.0"
+attachments_read: null
+fix_primary: web
+channels_mobile: false
+channels_web: true
+channels_data: false
+implicated_areas_count: 5
+---
+
+# Triage: WFM-142519 - Roster blank space on Add panels
+
+## TL;DR
+
+**Bug:** Employee > Roster shows bottom blank space on Add panel flows.
+
+**Fix:** Web roster tab renderers and related roster contact summary/form layout need consistent panel-height and field-removal handling.
+
+**Action:** L3 Engineering to apply/validate fix consistently across all five confirmed tabs and run targeted regression.
+
+## Refinement update (R3)
+
+New evidence from follow-up confirms the same blank-space behavior on all affected tabs:
+- Pay Rule
+- Time Clocking
+- Alternate Work Location
+- Time Rounding
+- Time Collection
+
+This refinement changes cross-tab impact from inferred to confirmed and increases confidence.
+
+## Probable cause
+
+A shared roster UI layout/path issue affects multiple Associate detail tabs. The underlying pattern combines:
+1) partial Mobile Carrier field removal in roster contact summary/form structures, and/or
+2) tab renderer panel-height ordering/layout calculations during Add panel expansion.
+
+Because the same symptom is confirmed on all five tabs, the defect is a reusable UI pattern issue rather than a single-tab isolated defect.
+
+## Probable fix
+
+1. Apply the same layout correction pattern consistently across all five affected tab renderers.
+2. Keep row/grid structure balanced after Mobile Carrier removal (no orphan/misaligned cells).
+3. Re-validate `showHide...Panel` and `updatePageHeight` ordering so Add panel expansion does not leave residual blank space.
+4. Verify parity between summary template and add/edit form rendering paths.
+
+## Test gap
+
+Missing targeted UI regression coverage for cross-tab Add-panel layout consistency.
+
+Required tests:
+- Add-flow layout validation per tab (all five tabs)
+- Open/close panel regression (no residual whitespace)
+- Viewport sanity checks (common desktop resolutions)
+
+## Open questions
+
+- **Q1 [ANSWERED]:** Are other tabs impacted? **Yes** - Pay Rule, Time Clocking, Alternate Work Location, Time Rounding, Time Collection are all impacted.
+- **Q2 [OPEN]:** Is impact reproducible in generic SIT flavors beyond COPPEL_SB?
+- **Q3 [OPEN]:** Any remaining roster associate tabs sharing the same renderer pattern that need preventive hardening?
+
+## Provenance
+
+### Refinement log
+
+| Rev | Timestamp | Triggered by | Summary of change |
+|-----|-----------|--------------|-------------------|
+| R1  | 2026-08-03T10:12:00+05:30 | Initial triage | First analysis - GENUINE_BUG, MEDIUM |
+| R2  | 2026-08-03T15:47:00+05:30 | /capture-fix | Fix capture added |
+| R3  | 2026-08-05T23:40:00+05:30 | /wst-defect-triage refinement | Confirmed all 5 affected tabs; confidence raised to HIGH |
+
+### Confidence flags
+
+- [INFO: Confidence raised from MEDIUM to HIGH in R3 due explicit confirmation of identical symptom across all five roster tabs]
+- [INFO: Web-only impact remains confirmed; no mobile/data evidence]
+
+<!-- /SKILL_SECTION -->
