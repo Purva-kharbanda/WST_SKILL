@@ -1,15 +1,15 @@
 {
   "attachments": {
     "1785949638114343": {
-      "bytes_written": 17361,
+      "bytes_written": 2694,
       "created": "2026-08-05T22:37:18.114343",
       "filename": "WFM-142519_handoff.md",
       "local_path": "handoffs/WFM-142519/WFM-142519_handoff.md",
-      "sha256": "846235e729e1f876bac79af4175be2918fb4789023380c77ad6ba743165025de",
-      "size": 17361,
-      "skill": "wst-defect-fix",
-      "revision": "F2",
-      "last_updated": "2026-08-05T22:42:21.766845",
+      "sha256": "b3fd4e5bcec705195350f92c3ba5c6019c7f85c6be4cd41eb9ea890f77a3e598",
+      "size": 2694,
+      "skill": "wst-junit-mockito",
+      "revision": "T1",
+      "last_updated": "2026-08-05T22:45:35.250708",
       "update_history": [
         {
           "skill": "wst-defect-triage",
@@ -20,6 +20,11 @@
           "skill": "wst-defect-fix",
           "revision": "F2",
           "timestamp": "2026-08-05T22:42:21.766845"
+        },
+        {
+          "skill": "wst-junit-mockito",
+          "revision": "T1",
+          "timestamp": "2026-08-05T22:45:35.250708"
         }
       ]
     }
@@ -30,6 +35,6 @@
     "WST_SKILL_BASED"
   ],
   "status": "",
-  "summary": "Fix stage F2 recaptured from current uncommitted multi-repo diff",
-  "updated": "2026-08-05T22:42:21.766845"
+  "summary": "JUnit plan T1: WFM-142519 UI-only fix — no Java test target in diff",
+  "updated": "2026-08-05T22:45:35.250708"
 }

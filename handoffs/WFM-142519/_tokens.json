@@ -1,16 +1,16 @@
 {
   "ticket_id": "WFM-142519",
-  "updated": "2026-08-05T22:42:21.768503",
+  "updated": "2026-08-05T22:45:35.250708",
   "pricing": {
     "input_per_1m_usd": 3.0,
     "output_per_1m_usd": 15.0
   },
   "totals": {
-    "input": 35399,
-    "output": 6264,
-    "total": 41663,
-    "cost_usd": 0.200157,
-    "revisions": 2
+    "input": 73459,
+    "output": 7887,
+    "total": 81346,
+    "cost_usd": 0.338682,
+    "revisions": 3
   },
   "skills": {
     "wst-defect-triage": {
@@ -94,6 +94,61 @@
             "agent_turns": 0,
             "tool_calls": 0,
             "conversation_id": "2026a3da-663d-457b-97ce-192f5e76c95b"
+          }
+        }
+      }
+    },
+    "wst-junit-mockito": {
+      "totals": {
+        "input": 38060,
+        "output": 1623,
+        "total": 39683,
+        "cost_usd": 0.138525,
+        "revisions": 1
+      },
+      "revisions": {
+        "T1": {
+          "summary": {
+            "input": 38060,
+            "output": 1623,
+            "total": 39683,
+            "cost_usd": 0.138525
+          },
+          "breakdown": {
+            "user_prompts": 36031,
+            "assistant_responses": 1623,
+            "skills_loaded": 0,
+            "file_search_reads": 459,
+            "code_edits": 0,
+            "shell_terminal": 1520,
+            "orchestration": 50
+          },
+          "tools": {
+            "Shell": {
+              "calls": 20,
+              "tokens": 1520
+            },
+            "ReadFile": {
+              "calls": 10,
+              "tokens": 270
+            },
+            "Glob": {
+              "calls": 7,
+              "tokens": 189
+            },
+            "rg": {
+              "calls": 1,
+              "tokens": 50
+            }
+          },
+          "metadata": {
+            "model": "gpt-5.3-codex",
+            "timestamp": "2026-08-05T22:45:35.250708",
+            "source": "transcript",
+            "user_turns": 3,
+            "agent_turns": 27,
+            "tool_calls": 38,
+            "conversation_id": "e7f577ee-1cd2-465f-b5ba-5176e582cf40"
           }
         }
       }
