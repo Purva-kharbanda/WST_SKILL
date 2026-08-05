@@ -9,6 +9,16 @@
       "size": 9879,
       "skill": "wst-defect-triage",
       "revision": "R1"
+    },
+    "1785907457200817": {
+      "bytes_written": 10293,
+      "created": "2026-08-05T10:54:17.200817",
+      "filename": "WFM-142519-20260805-1054.md",
+      "local_path": "handoffs/WFM-142519/WFM-142519-20260805-1054.md",
+      "sha256": "b14cb7d730fea765572104be2590c181f66d681d41e6f3bc5780819c371a5ac3",
+      "size": 10293,
+      "skill": "wst-defect-triage",
+      "revision": "R1"
     }
   },
   "key": "WFM-142519",
@@ -17,17 +27,17 @@
     "WST_SKILL_BASED"
   ],
   "status": "",
-  "summary": "Dev story WFM-130904 — Roster Add panel blank space at bottom",
-  "updated": "2026-08-05T10:34:04.678448",
+  "summary": "Dev story WFM-130904 - Roster blank space at bottom on Add",
+  "updated": "2026-08-05T10:54:17.200817",
   "tokens": {
     "wst-defect-triage": {
       "R1": {
-        "input": 16778,
-        "output": 5872,
-        "total": 22650,
-        "cost_usd": 0.151002,
-        "model": "default",
-        "timestamp": "2026-08-05T10:34:04.678448"
+        "input": 8429,
+        "output": 13,
+        "total": 8456,
+        "cost_usd": 0.075987,
+        "model": "composer-2.5-fast",
+        "timestamp": "2026-08-05T10:54:17.200817"
       }
     }
   }
