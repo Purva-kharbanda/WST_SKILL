@@ -1,0 +1,30 @@
+{
+  "attachments": {
+    "1785949934291714": {
+      "bytes_written": 980,
+      "created": "2026-08-05T22:42:14.291714",
+      "filename": "FREE-TIMECLOCKING-001_handoff.md",
+      "local_path": "handoffs/FREE-TIMECLOCKING-001/FREE-TIMECLOCKING-001_handoff.md",
+      "sha256": "97942da0121a26da9917ad9559b0fcf315542250000caadafd6148dcd506023a",
+      "size": 980,
+      "skill": "wst-defect-triage",
+      "revision": "R1",
+      "last_updated": "2026-08-05T22:42:14.291714",
+      "update_history": [
+        {
+          "skill": "wst-defect-triage",
+          "revision": "R1",
+          "timestamp": "2026-08-05T22:42:14.291714"
+        }
+      ]
+    }
+  },
+  "key": "FREE-TIMECLOCKING-001",
+  "label_added_iso": null,
+  "labels": [
+    "WST_SKILL_BASED"
+  ],
+  "status": "",
+  "summary": "Time Clocking UI blank area triage",
+  "updated": "2026-08-05T22:42:14.291714"
+}
