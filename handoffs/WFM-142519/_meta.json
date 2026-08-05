@@ -1,0 +1,23 @@
+{
+  "attachments": {
+    "1785905115819140": {
+      "bytes_written": 10684,
+      "created": "2026-08-05T10:15:15.819140",
+      "filename": "WFM-142519-20260805-1015.md",
+      "local_path": "handoffs/WFM-142519/WFM-142519-20260805-1015.md",
+      "sha256": "0b89df2315d66b51027270ad5c4fe1125192aaa7ae7fe068d0ba07ff631bc4e5",
+      "size": 10684,
+      "skill": "wst-defect-triage",
+      "revision": "R2"
+    }
+  },
+  "key": "WFM-142519",
+  "label_added_iso": null,
+  "labels": [
+    "WST_SKILL_BASED"
+  ],
+  "status": "",
+  "summary": "Dev story - WFM-130904 - Roster blank space at bottom when adding records on associate sub-tabs",
+  "updated": "2026-08-05T10:15:15.819140",
+  "tokens": {}
+}
