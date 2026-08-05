@@ -1,0 +1,33 @@
+{
+  "attachments": {
+    "1785905538327225": {
+      "bytes_written": 10824,
+      "created": "2026-08-05T10:22:18.327225",
+      "filename": "WFM-142519-20260805-1022.md",
+      "local_path": "handoffs/WFM-142519/WFM-142519-20260805-1022.md",
+      "sha256": "cf38ed06959e16c8aa2a4807b65d841b3ace6c6c91fe3a4cc9a0c6e0f917acdc",
+      "size": 10824,
+      "skill": "wst-defect-triage",
+      "revision": "R1"
+    }
+  },
+  "key": "WFM-142519",
+  "label_added_iso": null,
+  "labels": [
+    "WST_SKILL_BASED"
+  ],
+  "status": "",
+  "summary": "Dev story - Roster blank space at bottom when Add on Pay Rule/Time Clocking/Alt Work Loc/Time Rounding/Time Collection",
+  "updated": "2026-08-05T10:22:18.327225",
+  "tokens": {
+    "wst-defect-triage": {
+      "R1": {
+        "input": 16778,
+        "output": 0,
+        "total": 16778,
+        "cost_usd": 0.151002,
+        "timestamp": "2026-08-05T10:22:18.327225"
+      }
+    }
+  }
+}
