@@ -1,0 +1,30 @@
+{
+  "attachments": {
+    "1785912710174400": {
+      "bytes_written": 10219,
+      "created": "2026-08-05T12:21:50.174400",
+      "filename": "WFM-142519_handoff.md",
+      "local_path": "handoffs/WFM-142519/WFM-142519_handoff.md",
+      "sha256": "090625243c13c5b3b0dfe4e3075aabba314d61973ad669f40c2469d341bf08c3",
+      "size": 10219,
+      "skill": "wst-defect-triage",
+      "revision": "R1",
+      "last_updated": "2026-08-05T12:21:50.174400",
+      "update_history": [
+        {
+          "skill": "wst-defect-triage",
+          "revision": "R1",
+          "timestamp": "2026-08-05T12:21:50.174400"
+        }
+      ]
+    }
+  },
+  "key": "WFM-142519",
+  "label_added_iso": null,
+  "labels": [
+    "WST_SKILL_BASED"
+  ],
+  "status": "",
+  "summary": "Roster blank space at bottom when Add panel opens",
+  "updated": "2026-08-05T12:21:50.174400"
+}
