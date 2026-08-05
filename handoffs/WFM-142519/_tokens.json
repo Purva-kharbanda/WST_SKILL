@@ -1,6 +1,6 @@
 {
   "ticket_id": "WFM-142519",
-  "updated": "2026-08-05T11:15:32.086401",
+  "updated": "2026-08-05T11:59:55.426043",
   "skills": {
     "wst-defect-triage": {
       "R3": {
@@ -10,6 +10,16 @@
         "cost_usd": 0.079389,
         "model": "composer-2.5-fast",
         "timestamp": "2026-08-05T11:15:32.086401"
+      }
+    },
+    "wst-defect-fix": {
+      "F2": {
+        "input": 12628,
+        "output": 366,
+        "total": 13361,
+        "cost_usd": 0.116955,
+        "model": "composer-2.5-fast",
+        "timestamp": "2026-08-05T11:59:55.426043"
       }
     }
   }

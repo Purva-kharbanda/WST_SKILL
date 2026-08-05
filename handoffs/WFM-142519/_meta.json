@@ -1,20 +1,25 @@
 {
   "attachments": {
     "1785908732086401": {
-      "bytes_written": 14784,
+      "bytes_written": 17805,
       "created": "2026-08-05T11:15:32.086401",
       "filename": "WFM-142519_handoff.md",
       "local_path": "handoffs/WFM-142519/WFM-142519_handoff.md",
-      "sha256": "cd925c276ebabc8a3bac0d91a6eabcc620f483b19fd039646c65388518a5d784",
-      "size": 14784,
-      "skill": "wst-defect-triage",
-      "revision": "R3",
-      "last_updated": "2026-08-05T11:15:32.086401",
+      "sha256": "d852afbb68856d9565a5882cf463cc1c87168f0e77657e28414635c8dbd6098b",
+      "size": 17805,
+      "skill": "wst-defect-fix",
+      "revision": "F2",
+      "last_updated": "2026-08-05T11:59:55.422960",
       "update_history": [
         {
           "skill": "wst-defect-triage",
           "revision": "R3",
           "timestamp": "2026-08-05T11:15:32.086401"
+        },
+        {
+          "skill": "wst-defect-fix",
+          "revision": "F2",
+          "timestamp": "2026-08-05T11:59:55.422960"
         }
       ]
     }
@@ -25,6 +30,6 @@
     "WST_SKILL_BASED"
   ],
   "status": "",
-  "summary": "Dev story - WFM-130904 - Roster blank space at bottom when adding new record",
-  "updated": "2026-08-05T11:15:32.086401"
+  "summary": "Roster blank space at bottom when adding new record",
+  "updated": "2026-08-05T11:59:55.422960"
 }
