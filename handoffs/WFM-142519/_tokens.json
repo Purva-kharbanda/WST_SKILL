@@ -1,25 +1,25 @@
 {
   "ticket_id": "WFM-142519",
-  "updated": "2026-08-05T23:00:35.698598",
+  "updated": "2026-08-05T23:08:24.759071",
   "pricing": {
     "input_per_1m_usd": 3.0,
     "output_per_1m_usd": 15.0
   },
   "totals": {
-    "input": 47276,
-    "output": 1056,
-    "total": 48332,
-    "cost_usd": 0.157668,
-    "revisions": 2
+    "input": 95866,
+    "output": 3780,
+    "total": 99646,
+    "cost_usd": 0.344298,
+    "revisions": 3
   },
   "skills": {
     "wst-defect-triage": {
       "totals": {
-        "input": 17704,
-        "output": 32,
-        "total": 17736,
-        "cost_usd": 0.053592,
-        "revisions": 1
+        "input": 66294,
+        "output": 2756,
+        "total": 69050,
+        "cost_usd": 0.240222,
+        "revisions": 2
       },
       "revisions": {
         "R1": {
@@ -55,6 +55,54 @@
             "user_turns": 1,
             "agent_turns": 1,
             "tool_calls": 3,
+            "conversation_id": "e7f577ee-1cd2-465f-b5ba-5176e582cf40"
+          }
+        },
+        "R2": {
+          "summary": {
+            "input": 48590,
+            "output": 2724,
+            "total": 51314,
+            "cost_usd": 0.18663
+          },
+          "breakdown": {
+            "user_prompts": 45414,
+            "assistant_responses": 2724,
+            "skills_loaded": 0,
+            "file_search_reads": 1188,
+            "code_edits": 1000,
+            "shell_terminal": 988,
+            "orchestration": 0
+          },
+          "tools": {
+            "Read": {
+              "calls": 22,
+              "tokens": 594
+            },
+            "Shell": {
+              "calls": 13,
+              "tokens": 988
+            },
+            "Grep": {
+              "calls": 12,
+              "tokens": 432
+            },
+            "Glob": {
+              "calls": 6,
+              "tokens": 162
+            },
+            "Write": {
+              "calls": 2,
+              "tokens": 1000
+            }
+          },
+          "metadata": {
+            "model": "composer-2.5-fast",
+            "timestamp": "2026-08-05T23:08:24.759071",
+            "source": "transcript",
+            "user_turns": 4,
+            "agent_turns": 29,
+            "tool_calls": 55,
             "conversation_id": "e7f577ee-1cd2-465f-b5ba-5176e582cf40"
           }
         }

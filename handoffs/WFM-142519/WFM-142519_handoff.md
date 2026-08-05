@@ -488,3 +488,267 @@ On Employee > Roster, after filtering by store/location and opening an associate
 <!-- /SKILL_SECTION -->
 
 <!-- /SKILL_SECTION -->
+
+<!-- SKILL_SECTION: wst-defect-triage R2 -->
+## TRIAGE (R2)
+*Updated: 2026-08-05 23:08*
+
+﻿# WFM-142519 â€” Handoff Document
+
+*Multi-skill handoff document. Each section below represents a different skill output.*
+
+<!-- SKILL_SECTION: wst-defect-triage R2 -->
+## TRIAGE (R2)
+*Updated: 2026-08-05 23:15*
+
+---
+id: WFM-142519
+summary: "Dev story - WFM-130904 - Roster Add panel leaves blank space at bottom of page"
+verdict: GENUINE_BUG
+confidence: HIGH
+step_reached: KB_STEP2
+input_form: jira_json
+module: "WFM-OM/HR/Integrations/Notifications"
+customer: COPPEL_SB
+flavour: null
+affects_version: "45.1.22.0"
+fix_version: "45.1.22.3"
+priority: Medium
+blast_radius: global
+next_owner: L3-Engineering
+sla: P3-next-sprint
+status: Refined
+version: R2
+generated: "2026-08-05T17:30:00+05:30"
+last_updated: "2026-08-05T23:15:00+05:30"
+duration_minutes: 12
+model: composer-2.5-fast
+skill_version: "2.2.0"
+attachments_read: null
+fix_primary: web
+channels_mobile: false
+channels_web: true
+channels_data: false
+fault_locus: client_app
+channel_confidence: HIGH
+implicated_areas_count: 37
+pr_scope_files: 37
+---
+
+# Triage: WFM-142519 â€” Roster Add panel leaves blank space at bottom of page
+
+## TL;DR
+
+**Bug:** On Employee > Roster, clicking Add on associate-detail tabs with bottom panels opens the add form but leaves a large blank gap below it because `showAddTemplateTab` (or `showAddEditTemplateTab`) is toggled **before** `updatePageHeight()` recalculates the main grid height.
+**Fix:** Apply the same reorder fix across **all 37 roster renderer files** that use this anti-pattern â€” call `updatePageHeight()` before setting the visibility flag inside each `showHide*Panel` helper. Five repro tabs are already patched locally; **32 files remain**.
+**Action:** L3-Engineering â€” P3-next-sprint â€” Complete the roster-wide sweep, commit all 37 renderer JS files (exclude unrelated working-tree changes), and spot-check Add/Close on repro tabs plus 2â€“3 additional tabs.
+
+## Ticket snapshot
+
+- **Module:**             WFM-OM/HR/Integrations/Notifications (HR)
+- **Customer / flavour:** COPPEL_SB CORP (n/a)
+- **Affects version:**    45.1.22.0 (build WFM.45.1.22.0.20260416.U003851)
+- **Priority:**           Medium
+- **Stage:**              To Do (dev story from bug WFM-130904)
+- **Original input:**     i think the same fix is needed for all other 20 roster files as well
+
+## Fix routing (from ticket + code)
+
+**Primary fix location:** web â€” client-side AngularJS layout in roster bottom-panel controllers; confirmed by Step 2 code walk + R2 repo grep.
+
+**Channels (fix may be required):**
+
+| Channel | Required? | Evidence |
+|---------|-----------|----------|
+| Mobile (Shift App) | no | Web-only repro on kernel Roster URL |
+| Web / server | yes | Employee > Roster JSP/AngularJS; no server API involved |
+| Data / master data | no | Pure UI height calculation defect |
+| Shared mobile shell (kernel_auth / ZDS) | n/a | â€” |
+
+**Implicated areas:**
+
+| Area | Layer | Fix owner | Confidence | Notes |
+|------|-------|-----------|------------|-------|
+| Roster > all associate-detail Add panels | web_ui | web | HIGH | Systemic anti-pattern in 37 `roster.*.renderers.js` files |
+| Roster > Pay Rule / Time Clocking / AWL / Time Rounding / Time Collection | web_ui | web | HIGH | Original WFM-130904 repro (5 files â€” fixed locally) |
+| Roster > remaining tabs (Availability, Day Off, Contact Info, etc.) | web_ui | web | HIGH | Same `vm.showAddTemplateTab = show` ordering â€” 31 files + hoursAllocation |
+
+**Routing reconciliation:** confirmed â€” Step 2 + R2 grep found identical client-side ordering bug across the roster renderer module; no server path implicated.
+
+## Prior analysis critique
+
+R1 correctly identified the root cause and fix pattern on the five repro tabs. R1 understated scope as "optional follow-up" â€” developer confirmation (R2) and repo grep prove the identical anti-pattern exists in **32 additional files** (31 Ã— `showAddTemplateTab`, 1 Ã— `showAddEditTemplateTab` in hoursAllocation). `roster.attributes.renderers.js` already orders `updatePageHeight` correctly and is excluded.
+
+---
+
+## Probable cause
+
+- **Symptom:** After clicking Add on Roster associate-detail tabs, a blank white area appears at the bottom of the page below the add form panel.
+- **Fault:** `WebContent/scripts/roster/roster.*.renderers.js` â€” `showHide*Panel` helpers set visibility flag before height recalculation (systemic copy-paste anti-pattern).
+- **Trigger:** User clicks Add; helper runs `vm.showAddTemplateTab = show` **before** `updatePageHeight(false)`, so Angular renders the bottom panel while the main list grid still occupies full `pageContentHeight`.
+- **Consequence:** Combined heights exceed the viewport allocation, producing visible blank space at the page bottom (layout double-count). Affects any tab using the shared bottom-panel pattern, not only the five repro tabs.
+
+## Probable fix
+
+> **[SKETCH]** Re-read each helper before applying â€” preserve branch-specific logic (e.g. `vm.dropdownStatus = {}` in contactInfo, commented `selectedTab` resets in kudos modules).
+
+- **File(s):** All roster renderer files listed below â€” reorder statements in each `showHide*Panel` (or equivalent) helper.
+- **Change sketch:** Remove leading `vm.showAddTemplateTab = show` (or `vm.showAddEditTemplateTab = show`). Set `false`/`true` **after** the corresponding `updatePageHeight(true/false)` call.
+- **Blast radius:** Global â€” all tenants using AngularJS Roster module with bottom add/edit panels.
+- **Migration:** None.
+- **PR scope:** **37 renderer JS files** total.
+
+**Already fixed locally (5 â€” WFM-130904 repro tabs):**
+- `roster.payRule.renderers.js`
+- `roster.timeClocking.renderers.js`
+- `roster.alternateWorkLocation.renderers.js`
+- `roster.timeRounding.renderers.js`
+- `roster.timeCollection.renderers.js`
+
+**Still need fix (32 â€” grep confirmed `vm.showAddTemplateTab = show` or `showAddEditTemplateTab = show` before `updatePageHeight`):**
+- `roster.accrualBalance.renderers.js`
+- `roster.agreedHours.renderers.js`
+- `roster.assocRepHierarchy.renderers.js`
+- `roster.availability.renderers.js`
+- `roster.availabilityTemplate.renderers.js`
+- `roster.awardsAndRecog.renderers.js`
+- `roster.contactInfo.renderers.js` *(layout fix only â€” exclude unrelated mobile-carrier edits from PR)*
+- `roster.dayOff.renderers.js`
+- `roster.delegation.renderers.js`
+- `roster.devices.renderers.js`
+- `roster.employeeAlerts.renderers.js`
+- `roster.empGroups.renderers.js`
+- `roster.employmentStatus.renderers.js`
+- `roster.hoursAllocation.renderers.js` *(uses `showAddEditTemplateTab`)*
+- `roster.hoursToGoal.renderers.js`
+- `roster.hrciAudit.renderers.js`
+- `roster.identification.renderers.js`
+- `roster.kudosAwards.renderers.js`
+- `roster.kudosCompliments.renderers.js`
+- `roster.kudosConfiguration.renderers.js`
+- `roster.kudosFriends.renderers.js`
+- `roster.kudosPoints.renderers.js`
+- `roster.releaseToStaffGroup.renderers.js`
+- `roster.releaseToStore.renderers.js`
+- `roster.shiftpatterns.renderers.js`
+- `roster.skillsAndCert.renderers.js`
+- `roster.staffGroup.renderers.js`
+- `roster.tempAgreement.renderers.js`
+- `roster.timeOff.renderers.js`
+- `roster.unitAlerts.renderers.js`
+- `roster.unitPriority.renderers.js`
+- `roster.wages.renderers.js`
+
+**Excluded (already correct or different pattern):**
+- `roster.attributes.renderers.js` â€” `updatePageHeight` already precedes visibility toggle
+
+**Do NOT include in PR:** `roster.jsp` (line-ending churn), unrelated ESS/security/weekplan edits, `src/config.properties`, `src/rfxconfig.properties`
+
+```javascript
+// [SKETCH] â€” Target pattern (from payRule working-tree fix):
+this.showHideContactInfoPanel = function (show) {
+    if (!show) {
+        vm.updatePageHeight(true);
+        vm.showAddTemplateTab = false;
+        vm.selectedTab = "";
+    } else {
+        vm.updatePageHeight(false);
+        vm.showAddTemplateTab = true;
+    }
+};
+```
+
+---
+
+## Test gap
+
+| ID | Persona | Action | Condition | Expected | Risk | Flavour |
+|---|---|---|---|---|---|---|
+| TC-NEW-WFM142519-1 | SYSADMIN | Roster > Associate > Pay Rule > Add | COPPEL-style filter applied | Add panel flush to bottom; no blank gap | HIGH | all |
+| TC-NEW-WFM142519-2 | SYSADMIN | Add on all five repro tabs | Same associate/filter | No bottom blank space on any repro tab | HIGH | all |
+| TC-NEW-WFM142519-3 | SYSADMIN | Add then Close on Pay Rule | Panel open | Main grid restores full height | MEDIUM | all |
+| TC-NEW-WFM142519-4 | SYSADMIN | Add on Availability + Day Off + Contact Info | Post-sweep build | Same layout fix â€” no blank gap | HIGH | all |
+| TC-NEW-WFM142519-5 | SYSADMIN | Add on Hours Allocation | Post-sweep build | `showAddEditTemplateTab` reorder verified | MEDIUM | all |
+
+- **Closest existing TC:** none identified in KB for roster page-height layout.
+- **Extend:** Add viewport-height assertion to any Roster BAT after Add click.
+
+---
+
+## Handoff envelope
+
+**Next owner:**  L3-Engineering
+**Next action:** Complete 32-file roster sweep with same reorder pattern; stage all 37 renderer files for PR targeting 45.1.22.3; QA spot-check repro tabs + Availability/Day Off/Contact Info.
+**SLA:**         P3-next-sprint
+
+**Open questions:**
+- **Q1** [ANSWERED: yes â€” developer confirmed R2] Should the same ordering fix be applied to all other roster renderer files with the identical pattern? **Yes â€” 32 additional files confirmed via grep; include in PR scope.**
+
+**Distribution:**
+- Primary: WFM OM/HR Engineering
+- CC: QA (Roster module)
+
+## Evidence trail
+
+- **KB citations:**      none (Step 1 INCONCLUSIVE)
+- **Code citations:**    Original 5 repro files (R1) + R2 grep: 32 files with `vm.showAddTemplateTab = show` at line before `updatePageHeight` in `WebContent/scripts/roster/`; `roster.hoursAllocation.renderers.js:327` (`showAddEditTemplateTab`)
+- **Mobile citations:**  not checked (web-only)
+- **Cross-channel:**     web_only
+- **TER evidence:**      not triggered
+- **Attachments read:**  none
+- **Skipped layers:**    [INFO: optional scheduling/ZTA repos not in workspace]
+
+### Candidate-cause ledger (UI-triggered)
+
+| Layer | Status | Confidence | Evidence |
+|-------|--------|------------|----------|
+| client_emission (web_js) | implicated | HIGH | Systemic showAddTemplateTab/updatePageHeight ordering in 37 roster renderers |
+| angular_template | checked-clear | HIGH | Templates bind pageContentHeight correctly |
+| server_api | checked-clear | HIGH | No REST on Add click |
+| jsp_scriptlet | checked-clear | MEDIUM | roster.jsp bootstrap only |
+| data_config | checked-clear | HIGH | No data dependency |
+| i18n | checked-clear | HIGH | Not a string issue |
+
+---
+
+## Clarifications
+
+### 2026-08-05 â€” R2 scope expansion (developer)
+
+Developer confirmed: "the same fix is needed for all other 20 roster files as well." Repo grep found **32 files** still on the buggy pattern (slightly more than the ~20 estimated in R1 open question Q1). PR scope expanded from 5 to 37 renderer files. Fix remains client-side reorder only â€” no server or config changes.
+
+---
+
+## Provenance
+
+**Confidence:** HIGH â€” Step 2 root cause unchanged; R2 grep confirms identical anti-pattern in 32 additional files; developer explicitly confirmed full sweep.
+
+**Triage duration:** ~12m
+**Model:** composer-2.5-fast
+
+### Refinement log
+
+| Rev | Date | Trigger | Verdict | Confidence | Summary |
+|-----|------|---------|---------|------------|---------|
+| R1 | 2026-08-05 | /triage WFM-142519 | GENUINE_BUG | HIGH | Client-side roster panel height ordering bug; local fix for 5 repro tabs |
+| R2 | 2026-08-05 | developer scope confirmation | GENUINE_BUG | HIGH | PR scope expanded to 37 roster renderers; 32 files still need sweep; Q1 answered yes |
+
+### Confidence flags
+
+- Working-tree: 5 files fixed, 32 pending â€” verify full sweep before PR.
+- Exclude unrelated working-tree edits (roster.jsp, ESS, security, config files).
+- contactInfo: apply layout fix only; do not bundle unrelated mobile-carrier removal.
+
+<!-- /SKILL_SECTION -->
+
+<!-- SKILL_SECTION: wst-defect-fix F1 -->
+## FIX (F1)
+*Updated: 2026-08-05 23:00*
+
+**Status:** Partial â€” 5 of 37 in-scope files captured in working tree. **Pending:** 32-file roster sweep per R2 triage refinement.
+
+See TRIAGE (R2) for full file list and updated PR scope.
+
+<!-- /SKILL_SECTION -->
+
+<!-- /SKILL_SECTION -->

@@ -1,15 +1,15 @@
 {
   "attachments": {
     "1785950893782929": {
-      "bytes_written": 27742,
+      "bytes_written": 40230,
       "created": "2026-08-05T22:58:13.782929",
       "filename": "WFM-142519_handoff.md",
       "local_path": "handoffs/WFM-142519/WFM-142519_handoff.md",
-      "sha256": "64d9705c7fd6fbfe4fe522a7d7948c70a17386ffd037b0baa99746ea5b4d22d9",
-      "size": 27742,
-      "skill": "wst-defect-fix",
-      "revision": "F1",
-      "last_updated": "2026-08-05T23:00:35.698598",
+      "sha256": "26af678ea92dc25d18456000d0fa963c5369d0b629ce85c7fd2805065d2737c2",
+      "size": 40230,
+      "skill": "wst-defect-triage",
+      "revision": "R2",
+      "last_updated": "2026-08-05T23:08:24.759071",
       "update_history": [
         {
           "skill": "wst-defect-triage",
@@ -20,6 +20,11 @@
           "skill": "wst-defect-fix",
           "revision": "F1",
           "timestamp": "2026-08-05T23:00:35.698598"
+        },
+        {
+          "skill": "wst-defect-triage",
+          "revision": "R2",
+          "timestamp": "2026-08-05T23:08:24.759071"
         }
       ]
     }
@@ -30,6 +35,6 @@
     "WST_SKILL_BASED"
   ],
   "status": "",
-  "summary": "Fix captured: roster Add panel height reorder in 5 renderer JS files",
-  "updated": "2026-08-05T23:00:35.698598"
+  "summary": "R2: expand PR scope to all 37 roster renderers; 32 files still need layout fix sweep",
+  "updated": "2026-08-05T23:08:24.759071"
 }
