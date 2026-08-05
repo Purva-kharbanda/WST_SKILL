@@ -1,0 +1,30 @@
+{
+  "attachments": {
+    "1785950893782929": {
+      "bytes_written": 10537,
+      "created": "2026-08-05T22:58:13.782929",
+      "filename": "WFM-142519_handoff.md",
+      "local_path": "handoffs/WFM-142519/WFM-142519_handoff.md",
+      "sha256": "07a8a55f14ce0c9da85a041f65bc600382bfeaac4d12ca02cb896a076d841521",
+      "size": 10537,
+      "skill": "wst-defect-triage",
+      "revision": "R1",
+      "last_updated": "2026-08-05T22:58:13.782929",
+      "update_history": [
+        {
+          "skill": "wst-defect-triage",
+          "revision": "R1",
+          "timestamp": "2026-08-05T22:58:13.782929"
+        }
+      ]
+    }
+  },
+  "key": "WFM-142519",
+  "label_added_iso": null,
+  "labels": [
+    "WST_SKILL_BASED"
+  ],
+  "status": "",
+  "summary": "Roster Add panel blank space — client-side showAddTemplateTab/updatePageHeight ordering bug",
+  "updated": "2026-08-05T22:58:13.782929"
+}
