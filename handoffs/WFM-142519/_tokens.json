@@ -1,51 +1,68 @@
 {
   "ticket_id": "WFM-142519",
-  "updated": "2026-08-05T23:23:16.204149",
+  "updated": "2026-08-05T23:33:49.565804",
   "pricing": {
     "input_per_1m_usd": 3.0,
     "output_per_1m_usd": 15.0
   },
   "totals": {
-    "input": 17623,
-    "output": 6168,
-    "total": 23791,
-    "cost_usd": 0.145389,
+    "input": 81795,
+    "output": 12556,
+    "total": 94351,
+    "cost_usd": 0.433725,
     "revisions": 1
   },
   "skills": {
     "wst-defect-triage": {
       "totals": {
-        "input": 17623,
-        "output": 6168,
-        "total": 23791,
-        "cost_usd": 0.145389,
+        "input": 81795,
+        "output": 12556,
+        "total": 94351,
+        "cost_usd": 0.433725,
         "revisions": 1
       },
       "revisions": {
         "R1": {
           "summary": {
-            "input": 17623,
-            "output": 6168,
-            "total": 23791,
-            "cost_usd": 0.145389
+            "input": 64172,
+            "output": 6388,
+            "total": 70560,
+            "cost_usd": 0.288336
           },
           "breakdown": {
-            "user_prompts": 17623,
-            "assistant_responses": 0,
+            "user_prompts": 63020,
+            "assistant_responses": 6388,
             "skills_loaded": 0,
-            "file_search_reads": 0,
+            "file_search_reads": 468,
             "code_edits": 0,
-            "shell_terminal": 0,
+            "shell_terminal": 684,
             "orchestration": 0
           },
-          "tools": {},
+          "tools": {
+            "Shell": {
+              "calls": 9,
+              "tokens": 684
+            },
+            "Grep": {
+              "calls": 7,
+              "tokens": 252
+            },
+            "Read": {
+              "calls": 7,
+              "tokens": 189
+            },
+            "Glob": {
+              "calls": 1,
+              "tokens": 27
+            }
+          },
           "metadata": {
-            "model": "claude-4.5-sonnet-thinking",
-            "timestamp": "2026-08-05T23:23:16.204149",
+            "model": "claude-4.5-sonnet",
+            "timestamp": "2026-08-05T23:33:49.565804",
             "source": "transcript",
-            "user_turns": 1,
-            "agent_turns": 0,
-            "tool_calls": 0,
+            "user_turns": 4,
+            "agent_turns": 18,
+            "tool_calls": 24,
             "conversation_id": "e7f577ee-1cd2-465f-b5ba-5176e582cf40"
           }
         }
