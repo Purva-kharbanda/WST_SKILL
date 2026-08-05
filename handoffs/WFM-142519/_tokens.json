@@ -1,0 +1,64 @@
+{
+  "ticket_id": "WFM-142519",
+  "updated": "2026-08-05T22:37:18.114343",
+  "pricing": {
+    "input_per_1m_usd": 3.0,
+    "output_per_1m_usd": 15.0
+  },
+  "totals": {
+    "input": 17677,
+    "output": 62,
+    "total": 17739,
+    "cost_usd": 0.053961,
+    "revisions": 1
+  },
+  "skills": {
+    "wst-defect-triage": {
+      "totals": {
+        "input": 17677,
+        "output": 62,
+        "total": 17739,
+        "cost_usd": 0.053961,
+        "revisions": 1
+      },
+      "revisions": {
+        "R1": {
+          "summary": {
+            "input": 17677,
+            "output": 62,
+            "total": 17739,
+            "cost_usd": 0.053961
+          },
+          "breakdown": {
+            "user_prompts": 17623,
+            "assistant_responses": 62,
+            "skills_loaded": 0,
+            "file_search_reads": 54,
+            "code_edits": 0,
+            "shell_terminal": 0,
+            "orchestration": 0
+          },
+          "tools": {
+            "Glob": {
+              "calls": 1,
+              "tokens": 27
+            },
+            "ReadFile": {
+              "calls": 1,
+              "tokens": 27
+            }
+          },
+          "metadata": {
+            "model": "gpt-5.3-codex",
+            "timestamp": "2026-08-05T22:37:18.114343",
+            "source": "transcript",
+            "user_turns": 1,
+            "agent_turns": 1,
+            "tool_calls": 2,
+            "conversation_id": "e7f577ee-1cd2-465f-b5ba-5176e582cf40"
+          }
+        }
+      }
+    }
+  }
+}
