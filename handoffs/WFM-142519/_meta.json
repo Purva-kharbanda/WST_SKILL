@@ -1,20 +1,25 @@
 {
   "attachments": {
     "1785949638114343": {
-      "bytes_written": 2812,
+      "bytes_written": 17361,
       "created": "2026-08-05T22:37:18.114343",
       "filename": "WFM-142519_handoff.md",
       "local_path": "handoffs/WFM-142519/WFM-142519_handoff.md",
-      "sha256": "e90510bdfc9234fa0c217226f8b8d7d96afdbded95d90bedc53938a34bca5e4b",
-      "size": 2812,
-      "skill": "wst-defect-triage",
-      "revision": "R1",
-      "last_updated": "2026-08-05T22:37:18.114343",
+      "sha256": "846235e729e1f876bac79af4175be2918fb4789023380c77ad6ba743165025de",
+      "size": 17361,
+      "skill": "wst-defect-fix",
+      "revision": "F2",
+      "last_updated": "2026-08-05T22:42:21.766845",
       "update_history": [
         {
           "skill": "wst-defect-triage",
           "revision": "R1",
           "timestamp": "2026-08-05T22:37:18.114343"
+        },
+        {
+          "skill": "wst-defect-fix",
+          "revision": "F2",
+          "timestamp": "2026-08-05T22:42:21.766845"
         }
       ]
     }
@@ -25,6 +30,6 @@
     "WST_SKILL_BASED"
   ],
   "status": "",
-  "summary": "GENUINE_BUG triage for roster blank space in contact add flow",
-  "updated": "2026-08-05T22:37:18.114343"
+  "summary": "Fix stage F2 recaptured from current uncommitted multi-repo diff",
+  "updated": "2026-08-05T22:42:21.766845"
 }
