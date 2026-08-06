@@ -1,20 +1,25 @@
 {
   "attachments": {
     "1786007146099346": {
-      "bytes_written": 9112,
+      "bytes_written": 12579,
       "created": "2026-08-06T14:35:46.099352",
       "filename": "WFM-140174_handoff.md",
       "local_path": "handoffs/WFM-140174/WFM-140174_handoff.md",
-      "sha256": "f108ceb2cb9d41931a344d92539ebe041f9a7a1f644dbc86d6a5e8b523140e0b",
-      "size": 9112,
+      "sha256": "15de7cef10ddb4d212afff21f5d5ed06d2cecaee1db44f73a91009ce999bcf79",
+      "size": 12579,
       "skill": "wst-defect-triage",
-      "revision": "R1",
-      "last_updated": "2026-08-06T14:35:46.099403",
+      "revision": "R2",
+      "last_updated": "2026-08-06T16:07:22.780755",
       "update_history": [
         {
           "skill": "wst-defect-triage",
           "revision": "R1",
           "timestamp": "2026-08-06T14:35:46.099349"
+        },
+        {
+          "skill": "wst-defect-triage",
+          "revision": "R2",
+          "timestamp": "2026-08-06T16:07:22.780500"
         }
       ]
     }
@@ -25,6 +30,6 @@
     "WST_SKILL_BASED"
   ],
   "status": "",
-  "summary": "Forecast Review Department filter wrong for Dept1/3; GENUINE_BUG MEDIUM; duplicate WFM-109065",
-  "updated": "2026-08-06T14:35:46.099333"
+  "summary": "GENUINE_BUG HIGH: getDepartments(corporateUnitId) misses non-corporate departments causing dept filter bypass in Forecast Review",
+  "updated": "2026-08-06T16:07:22.780464"
 }
