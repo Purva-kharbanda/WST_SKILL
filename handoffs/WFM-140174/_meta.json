@@ -1,0 +1,30 @@
+{
+  "attachments": {
+    "1786007146099346": {
+      "bytes_written": 9112,
+      "created": "2026-08-06T14:35:46.099352",
+      "filename": "WFM-140174_handoff.md",
+      "local_path": "handoffs/WFM-140174/WFM-140174_handoff.md",
+      "sha256": "f108ceb2cb9d41931a344d92539ebe041f9a7a1f644dbc86d6a5e8b523140e0b",
+      "size": 9112,
+      "skill": "wst-defect-triage",
+      "revision": "R1",
+      "last_updated": "2026-08-06T14:35:46.099403",
+      "update_history": [
+        {
+          "skill": "wst-defect-triage",
+          "revision": "R1",
+          "timestamp": "2026-08-06T14:35:46.099349"
+        }
+      ]
+    }
+  },
+  "key": "WFM-140174",
+  "label_added_iso": null,
+  "labels": [
+    "WST_SKILL_BASED"
+  ],
+  "status": "",
+  "summary": "Forecast Review Department filter wrong for Dept1/3; GENUINE_BUG MEDIUM; duplicate WFM-109065",
+  "updated": "2026-08-06T14:35:46.099333"
+}

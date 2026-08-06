@@ -1,0 +1,100 @@
+{
+  "ticket_id": "WFM-140174",
+  "updated": "2026-08-06T14:35:46.101064",
+  "pricing": {
+    "input_per_1m_usd": 3.0,
+    "output_per_1m_usd": 15.0
+  },
+  "totals": {
+    "input": 46557,
+    "output": 105786,
+    "total": 152343,
+    "cost_usd": 1.726461,
+    "revisions": 1
+  },
+  "skills": {
+    "wst-defect-triage": {
+      "totals": {
+        "input": 46557,
+        "output": 105786,
+        "total": 152343,
+        "cost_usd": 1.726461,
+        "revisions": 1
+      },
+      "revisions": {
+        "R1": {
+          "summary": {
+            "input": 46557,
+            "output": 105786,
+            "total": 152343,
+            "cost_usd": 1.726461
+          },
+          "breakdown": {
+            "user_prompts": 4103,
+            "assistant_responses": 105786,
+            "skills_loaded": 0,
+            "file_search_reads": 6066,
+            "code_edits": 23766,
+            "shell_terminal": 6232,
+            "orchestration": 6390
+          },
+          "tools": {
+            "Read": {
+              "calls": 130,
+              "tokens": 3510
+            },
+            "Shell": {
+              "calls": 82,
+              "tokens": 6232
+            },
+            "StrReplace": {
+              "calls": 62,
+              "tokens": 21266
+            },
+            "Grep": {
+              "calls": 56,
+              "tokens": 2016
+            },
+            "TodoWrite": {
+              "calls": 22,
+              "tokens": 1188
+            },
+            "Glob": {
+              "calls": 20,
+              "tokens": 540
+            },
+            "AwaitShell": {
+              "calls": 16,
+              "tokens": 800
+            },
+            "ReadLints": {
+              "calls": 10,
+              "tokens": 500
+            },
+            "Write": {
+              "calls": 5,
+              "tokens": 2500
+            },
+            "AskQuestion": {
+              "calls": 4,
+              "tokens": 600
+            },
+            "CreatePlan": {
+              "calls": 2,
+              "tokens": 3302
+            }
+          },
+          "metadata": {
+            "model": "composer-2.5",
+            "timestamp": "2026-08-06T14:35:46.101075",
+            "source": "transcript",
+            "user_turns": 53,
+            "agent_turns": 394,
+            "tool_calls": 409,
+            "conversation_id": "1ccb6197-8edb-484d-85a7-aedacc585cbd"
+          }
+        }
+      }
+    }
+  }
+}
