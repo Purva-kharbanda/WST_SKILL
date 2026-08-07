@@ -1,20 +1,25 @@
 {
   "attachments": {
     "1786082401178053": {
-      "bytes_written": 9564,
+      "bytes_written": 24895,
       "created": "2026-08-07T11:30:01.178070",
       "filename": "WFM-142502_handoff.md",
       "local_path": "handoffs/WFM-142502/WFM-142502_handoff.md",
-      "sha256": "a984ed0b0d6fb45c376ef23f55e10fa137e821954257e2ad917f16140d1f9725",
-      "size": 9564,
-      "skill": "wst-defect-triage",
-      "revision": "R1",
-      "last_updated": "2026-08-07T11:30:01.179544",
+      "sha256": "95732aa37822c90779a909609a27f2a019ad29003e262f4a11cc1205515b5aaa",
+      "size": 24895,
+      "skill": "wst-defect-fix",
+      "revision": "F1",
+      "last_updated": "2026-08-07T12:30:44.735676",
       "update_history": [
         {
           "skill": "wst-defect-triage",
           "revision": "R1",
           "timestamp": "2026-08-07T11:30:01.178060"
+        },
+        {
+          "skill": "wst-defect-fix",
+          "revision": "F1",
+          "timestamp": "2026-08-07T12:30:44.735363"
         }
       ]
     }
@@ -25,6 +30,6 @@
     "WST_SKILL_BASED"
   ],
   "status": "",
-  "summary": "Forecast scenario Add window missing Previous button — GENUINE_BUG web UI template gap",
-  "updated": "2026-08-07T11:30:01.178015"
+  "summary": "Fix stage F1 captured — Previous button on Initialize Forecast Add Scenario flow (2 files)",
+  "updated": "2026-08-07T12:30:44.735352"
 }
