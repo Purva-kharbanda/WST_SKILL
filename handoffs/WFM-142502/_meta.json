@@ -1,0 +1,30 @@
+{
+  "attachments": {
+    "1786082401178053": {
+      "bytes_written": 9564,
+      "created": "2026-08-07T11:30:01.178070",
+      "filename": "WFM-142502_handoff.md",
+      "local_path": "handoffs/WFM-142502/WFM-142502_handoff.md",
+      "sha256": "a984ed0b0d6fb45c376ef23f55e10fa137e821954257e2ad917f16140d1f9725",
+      "size": 9564,
+      "skill": "wst-defect-triage",
+      "revision": "R1",
+      "last_updated": "2026-08-07T11:30:01.179544",
+      "update_history": [
+        {
+          "skill": "wst-defect-triage",
+          "revision": "R1",
+          "timestamp": "2026-08-07T11:30:01.178060"
+        }
+      ]
+    }
+  },
+  "key": "WFM-142502",
+  "label_added_iso": null,
+  "labels": [
+    "WST_SKILL_BASED"
+  ],
+  "status": "",
+  "summary": "Forecast scenario Add window missing Previous button — GENUINE_BUG web UI template gap",
+  "updated": "2026-08-07T11:30:01.178015"
+}

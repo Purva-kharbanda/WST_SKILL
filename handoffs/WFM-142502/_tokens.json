@@ -1,0 +1,55 @@
+{
+  "ticket_id": "WFM-142502",
+  "updated": "2026-08-07T11:30:01.188433",
+  "pricing": {
+    "input_per_1m_usd": 3.0,
+    "output_per_1m_usd": 15.0
+  },
+  "totals": {
+    "input": 18546,
+    "output": 6491,
+    "total": 25037,
+    "cost_usd": 0.153003,
+    "revisions": 1
+  },
+  "skills": {
+    "wst-defect-triage": {
+      "totals": {
+        "input": 18546,
+        "output": 6491,
+        "total": 25037,
+        "cost_usd": 0.153003,
+        "revisions": 1
+      },
+      "revisions": {
+        "R1": {
+          "summary": {
+            "input": 18546,
+            "output": 6491,
+            "total": 25037,
+            "cost_usd": 0.153003
+          },
+          "breakdown": {
+            "user_prompts": 18546,
+            "assistant_responses": 0,
+            "skills_loaded": 0,
+            "file_search_reads": 0,
+            "code_edits": 0,
+            "shell_terminal": 0,
+            "orchestration": 0
+          },
+          "tools": {},
+          "metadata": {
+            "model": "composer-2.5",
+            "timestamp": "2026-08-07T11:30:01.188475",
+            "source": "transcript",
+            "user_turns": 1,
+            "agent_turns": 0,
+            "tool_calls": 0,
+            "conversation_id": "b497248a-4427-4344-a0f2-b00b5672bd1f"
+          }
+        }
+      }
+    }
+  }
+}
