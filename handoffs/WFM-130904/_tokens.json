@@ -1,16 +1,16 @@
 {
   "ticket_id": "WFM-130904",
-  "updated": "2026-08-10T11:05:54.323972",
+  "updated": "2026-08-10T12:57:04.769087",
   "pricing": {
     "input_per_1m_usd": 3.0,
     "output_per_1m_usd": 15.0
   },
   "totals": {
-    "input": 30039.0,
-    "output": 8940.0,
-    "total": 38979.0,
-    "cost_usd": 0.224217,
-    "revisions": 1
+    "input": 61229.0,
+    "output": 11263.0,
+    "total": 72492.0,
+    "cost_usd": 0.352632,
+    "revisions": 2
   },
   "skills": {
     "wst-defect-triage": {
@@ -111,6 +111,76 @@
             "conversation_id": "b8154981-8147-4fde-b115-6e0859819131",
             "author": "Purva-kharbanda",
             "transcript_lines": 183
+          }
+        }
+      }
+    },
+    "wst-defect-fix": {
+      "totals": {
+        "input": 31190.0,
+        "output": 2323.0,
+        "total": 33513.0,
+        "cost_usd": 0.128415,
+        "revisions": 1
+      },
+      "revisions": {
+        "A1": {
+          "summary": {
+            "input": 31190,
+            "output": 2323,
+            "total": 33513,
+            "cost_usd": 0.128415
+          },
+          "delta": {
+            "input": 31190,
+            "output": 2323,
+            "total": 33513,
+            "cost_usd": 0.128415
+          },
+          "cumulative": {
+            "input": 31190,
+            "output": 2323,
+            "total": 33513,
+            "cost_usd": 0.128415
+          },
+          "baseline": null,
+          "breakdown": {
+            "user_prompts": 30391,
+            "assistant_responses": 2323,
+            "skills_loaded": 0,
+            "file_search_reads": 297,
+            "code_edits": 0,
+            "shell_terminal": 152,
+            "orchestration": 350
+          },
+          "tools": {
+            "ReadFile": {
+              "calls": 9,
+              "tokens": 243
+            },
+            "rg": {
+              "calls": 7,
+              "tokens": 350
+            },
+            "Glob": {
+              "calls": 2,
+              "tokens": 54
+            },
+            "Shell": {
+              "calls": 2,
+              "tokens": 152
+            }
+          },
+          "metadata": {
+            "model": "gpt-5.3-codex",
+            "timestamp": "2026-08-10T12:57:04.769087",
+            "source": "session_full",
+            "user_turns": 3,
+            "agent_turns": 8,
+            "tool_calls": 20,
+            "conversation_id": "3066b448-ba45-4544-b69f-6efc0531e22e",
+            "author": "Purva-kharbanda",
+            "transcript_lines": 13
           }
         }
       }
