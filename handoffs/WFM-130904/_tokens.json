@@ -1,0 +1,119 @@
+{
+  "ticket_id": "WFM-130904",
+  "updated": "2026-08-10T11:05:54.323972",
+  "pricing": {
+    "input_per_1m_usd": 3.0,
+    "output_per_1m_usd": 15.0
+  },
+  "totals": {
+    "input": 30039.0,
+    "output": 8940.0,
+    "total": 38979.0,
+    "cost_usd": 0.224217,
+    "revisions": 1
+  },
+  "skills": {
+    "wst-defect-triage": {
+      "totals": {
+        "input": 30039.0,
+        "output": 8940.0,
+        "total": 38979.0,
+        "cost_usd": 0.224217,
+        "revisions": 1
+      },
+      "revisions": {
+        "R2": {
+          "summary": {
+            "input": 30039,
+            "output": 8940,
+            "total": 38979,
+            "cost_usd": 0.224217
+          },
+          "delta": {
+            "input": 30039,
+            "output": 8940,
+            "total": 38979,
+            "cost_usd": 0.224217
+          },
+          "cumulative": {
+            "input": 30039,
+            "output": 8940,
+            "total": 38979,
+            "cost_usd": 0.224217
+          },
+          "baseline": null,
+          "breakdown": {
+            "user_prompts": 1802,
+            "assistant_responses": 8940,
+            "skills_loaded": 0,
+            "file_search_reads": 7407,
+            "code_edits": 14428,
+            "shell_terminal": 5486,
+            "orchestration": 916
+          },
+          "tools": {
+            "Grep": {
+              "calls": 133,
+              "tokens": 4788
+            },
+            "Read": {
+              "calls": 79,
+              "tokens": 2133
+            },
+            "Shell": {
+              "calls": 71,
+              "tokens": 5396
+            },
+            "StrReplace": {
+              "calls": 36,
+              "tokens": 12348
+            },
+            "Glob": {
+              "calls": 18,
+              "tokens": 486
+            },
+            "TodoWrite": {
+              "calls": 4,
+              "tokens": 216
+            },
+            "Write": {
+              "calls": 4,
+              "tokens": 2000
+            },
+            "Await": {
+              "calls": 3,
+              "tokens": 90
+            },
+            "CallMcpTool": {
+              "calls": 3,
+              "tokens": 300
+            },
+            "Delete": {
+              "calls": 2,
+              "tokens": 80
+            },
+            "ReadLints": {
+              "calls": 2,
+              "tokens": 100
+            },
+            "Task": {
+              "calls": 1,
+              "tokens": 300
+            }
+          },
+          "metadata": {
+            "model": "composer-2.5-fast",
+            "timestamp": "2026-08-10T11:05:54.323972",
+            "source": "session_full",
+            "user_turns": 18,
+            "agent_turns": 160,
+            "tool_calls": 356,
+            "conversation_id": "b8154981-8147-4fde-b115-6e0859819131",
+            "author": "Purva-kharbanda",
+            "transcript_lines": 183
+          }
+        }
+      }
+    }
+  }
+}

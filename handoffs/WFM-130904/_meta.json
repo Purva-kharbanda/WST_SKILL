@@ -1,0 +1,30 @@
+{
+  "attachments": {
+    "1786340152992621": {
+      "bytes_written": 13554,
+      "created": "2026-08-10T11:05:52.992621",
+      "filename": "WFM-130904_handoff.md",
+      "local_path": "handoffs/WFM-130904/WFM-130904_handoff.md",
+      "sha256": "50d00614cf73a3df3415a4f86b3b732ca1cdea7005a875a8e82cd9b77c055ad0",
+      "size": 13554,
+      "skill": "wst-defect-triage",
+      "revision": "R2",
+      "last_updated": "2026-08-10T11:05:52.993624",
+      "update_history": [
+        {
+          "skill": "wst-defect-triage",
+          "revision": "R2",
+          "timestamp": "2026-08-10T11:05:52.992621"
+        }
+      ]
+    }
+  },
+  "key": "WFM-130904",
+  "label_added_iso": null,
+  "labels": [
+    "WST_SKILL_BASED"
+  ],
+  "status": "",
+  "summary": "GENUINE_BUG HIGH — roster Add panel blank gap; web UI height binding fix across 5 sub-tabs",
+  "updated": "2026-08-10T11:05:52.992621"
+}
