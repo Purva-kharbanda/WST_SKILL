@@ -1,20 +1,25 @@
 {
   "attachments": {
     "1786427977748322": {
-      "bytes_written": 10171,
+      "bytes_written": 12945,
       "created": "2026-08-11T11:29:37.748328",
       "filename": "WFM-142519_handoff.md",
       "local_path": "handoffs/WFM-142519/WFM-142519_handoff.md",
-      "sha256": "fb22b596ba0d4372f763486983e98f53596c3a3ff19ef7aba383e56620590124",
-      "size": 10171,
+      "sha256": "c6593ac2f484dbc6f82b46b3202f2c30d783d7091abc3265ed6a355687d46b42",
+      "size": 12945,
       "skill": "wst-defect-triage",
-      "revision": "R1",
-      "last_updated": "2026-08-11T11:29:37.748771",
+      "revision": "R2",
+      "last_updated": "2026-08-11T11:32:59.641776",
       "update_history": [
         {
           "skill": "wst-defect-triage",
           "revision": "R1",
           "timestamp": "2026-08-11T11:29:37.748324"
+        },
+        {
+          "skill": "wst-defect-triage",
+          "revision": "R2",
+          "timestamp": "2026-08-11T11:32:59.641690"
         }
       ]
     }
@@ -25,6 +30,6 @@
     "WST_SKILL_BASED"
   ],
   "status": "",
-  "summary": "ALREADY_FIXED — Roster blank space on Add; PR #22224 web UI height fix for WFM-130904 (45.1.23.0)",
-  "updated": "2026-08-11T11:29:37.748307"
+  "summary": "R2: ~29 other roster renderers share same pageContentHeight bug pattern; PR scoped to 5 reported sub-tabs",
+  "updated": "2026-08-11T11:32:59.641669"
 }
