@@ -1,25 +1,25 @@
 {
   "ticket_id": "WFM-141456",
-  "updated": "2026-08-11T23:32:25.542738",
+  "updated": "2026-08-11T23:48:30.322452",
   "pricing": {
     "input_per_1m_usd": 3.0,
     "output_per_1m_usd": 15.0
   },
   "totals": {
-    "input": 65276.0,
-    "output": 35148.0,
-    "total": 100424.0,
-    "cost_usd": 0.723048,
-    "revisions": 1
+    "input": 130552.0,
+    "output": 70296.0,
+    "total": 200848.0,
+    "cost_usd": 1.446096,
+    "revisions": 2
   },
   "skills": {
     "wst-defect-triage": {
       "totals": {
-        "input": 65276.0,
-        "output": 35148.0,
-        "total": 100424.0,
-        "cost_usd": 0.723048,
-        "revisions": 1
+        "input": 130552.0,
+        "output": 70296.0,
+        "total": 200848.0,
+        "cost_usd": 1.446096,
+        "revisions": 2
       },
       "revisions": {
         "R1": {
@@ -74,6 +74,62 @@
             "agent_turns": 0,
             "tool_calls": 0,
             "conversation_id": "7127d0e6-2a30-4dec-a058-04aea1f16c89",
+            "author": "JayDeshmukh02",
+            "transcript_lines": 1
+          }
+        },
+        "R2": {
+          "summary": {
+            "input": 65276,
+            "output": 35148,
+            "total": 100424,
+            "cost_usd": 0.723048
+          },
+          "delta": {
+            "input": 65276,
+            "output": 35148,
+            "total": 100424,
+            "cost_usd": 0.723048
+          },
+          "cumulative": {
+            "input": 65276,
+            "output": 35148,
+            "total": 100424,
+            "cost_usd": 0.723048
+          },
+          "baseline": null,
+          "breakdown": {
+            "context_window": 100424,
+            "transcript_tokens": 17594,
+            "estimation_model": "v2",
+            "workspace_rules": 67930,
+            "tool_definitions": 8900,
+            "user_prompts": 17594,
+            "assistant_responses": 0,
+            "tool_call_inputs": 0,
+            "tool_results_estimated": 0,
+            "tool_call_overhead": 0,
+            "skills_loaded": 0,
+            "file_search_reads": 0,
+            "code_edits": 0,
+            "shell_terminal": 0,
+            "orchestration": 0,
+            "static_context": {
+              "Workspace Rules": 67930,
+              "Tool Definitions": 8900,
+              "System Prompt": 3500,
+              "MCP & Skills Catalog": 2500
+            }
+          },
+          "tools": {},
+          "metadata": {
+            "model": "composer-2.5",
+            "timestamp": "2026-08-11T23:48:30.322516",
+            "source": "session_full",
+            "user_turns": 1,
+            "agent_turns": 0,
+            "tool_calls": 0,
+            "conversation_id": "2b609ecb-8f6e-4b3d-8de8-bb50c1e59e93",
             "author": "JayDeshmukh02",
             "transcript_lines": 1
           }

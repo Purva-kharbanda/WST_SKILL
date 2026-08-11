@@ -1,15 +1,15 @@
 {
   "attachments": {
     "1786470740946237": {
-      "bytes_written": 11504,
+      "bytes_written": 23175,
       "created": "2026-08-11T23:22:20.946243",
       "filename": "WFM-141456_handoff.md",
       "local_path": "handoffs/WFM-141456/WFM-141456_handoff.md",
-      "sha256": "6803c0ba0224ad9d653889400252233e89042dd66910120b1c299d2ae255658d",
-      "size": 11504,
+      "sha256": "c26397668b8a8a0a538211004cd4407788320faa35d4167dede079c9473b42a3",
+      "size": 23175,
       "skill": "wst-defect-triage",
-      "revision": "R1",
-      "last_updated": "2026-08-11T23:32:24.351832",
+      "revision": "R2",
+      "last_updated": "2026-08-11T23:48:28.943280",
       "update_history": [
         {
           "skill": "wst-defect-triage",
@@ -20,6 +20,11 @@
           "skill": "wst-defect-triage",
           "revision": "R1",
           "timestamp": "2026-08-11T23:32:24.351757"
+        },
+        {
+          "skill": "wst-defect-triage",
+          "revision": "R2",
+          "timestamp": "2026-08-11T23:48:28.943059"
         }
       ]
     }
@@ -30,6 +35,6 @@
     "WST_SKILL_BASED"
   ],
   "status": "",
-  "summary": "ESS AWL console 422 + CSS 404 + ui-bootstrap TypeError — LOS AuthParam gap",
-  "updated": "2026-08-11T23:32:24.351740"
+  "summary": "ESS AWL console 422 + CSS 404 + ui-bootstrap error — GENUINE_BUG re-validated R2",
+  "updated": "2026-08-11T23:48:28.943017"
 }
