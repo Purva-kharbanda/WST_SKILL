@@ -1,0 +1,30 @@
+{
+  "attachments": {
+    "1786473159041522": {
+      "bytes_written": 7884,
+      "created": "2026-08-12T00:02:39.041538",
+      "filename": "WFM-141485_handoff.md",
+      "local_path": "handoffs/WFM-141485/WFM-141485_handoff.md",
+      "sha256": "e2d2feea7a5773c673867c0ad53f3ae997742566e55bbf0624f36475ecff9ddc",
+      "size": 7884,
+      "skill": "wst-defect-triage",
+      "revision": "R1",
+      "last_updated": "2026-08-12T00:02:39.041670",
+      "update_history": [
+        {
+          "skill": "wst-defect-triage",
+          "revision": "R1",
+          "timestamp": "2026-08-12T00:02:39.041530"
+        }
+      ]
+    }
+  },
+  "key": "WFM-141485",
+  "label_added_iso": null,
+  "labels": [
+    "WST_SKILL_BASED"
+  ],
+  "status": "",
+  "summary": "Absence Configuration errors/warnings on add-edit — NEEDS_MORE_INFO pending exact messages",
+  "updated": "2026-08-12T00:02:39.041485"
+}
