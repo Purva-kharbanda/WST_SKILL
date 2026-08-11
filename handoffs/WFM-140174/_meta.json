@@ -1,20 +1,25 @@
 {
   "attachments": {
     "1786432664815778": {
-      "bytes_written": 8177,
+      "bytes_written": 17103,
       "created": "2026-08-11T12:47:44.815787",
       "filename": "WFM-140174_handoff.md",
       "local_path": "handoffs/WFM-140174/WFM-140174_handoff.md",
-      "sha256": "091b329f494f69e9e4b3a48bfb78901980496cffe35eed9681489f8919924316",
-      "size": 8177,
+      "sha256": "495932f1a168c839da0fc39e1ce5a39370578e81260089f1aa1ff96b950ef43d",
+      "size": 17103,
       "skill": "wst-defect-triage",
-      "revision": "R1",
-      "last_updated": "2026-08-11T12:47:44.817249",
+      "revision": "R2",
+      "last_updated": "2026-08-11T12:51:34.905508",
       "update_history": [
         {
           "skill": "wst-defect-triage",
           "revision": "R1",
           "timestamp": "2026-08-11T12:47:44.815782"
+        },
+        {
+          "skill": "wst-defect-triage",
+          "revision": "R2",
+          "timestamp": "2026-08-11T12:51:34.905295"
         }
       ]
     }
@@ -25,6 +30,6 @@
     "WST_SKILL_BASED"
   ],
   "status": "",
-  "summary": "Forecast Review dept filter skeleton fallback ignores departmentIds — GENUINE_BUG MEDIUM",
-  "updated": "2026-08-11T12:47:44.815733"
+  "summary": "WFM-140174 Forecast Review dept filter — R2: WFM-109065 is main bug, not duplicate",
+  "updated": "2026-08-11T12:51:34.905258"
 }
