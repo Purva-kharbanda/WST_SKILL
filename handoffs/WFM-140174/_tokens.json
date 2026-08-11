@@ -1,0 +1,84 @@
+{
+  "ticket_id": "WFM-140174",
+  "updated": "2026-08-11T12:47:46.246975",
+  "pricing": {
+    "input_per_1m_usd": 3.0,
+    "output_per_1m_usd": 15.0
+  },
+  "totals": {
+    "input": 67486.0,
+    "output": 23620.0,
+    "total": 67486.0,
+    "cost_usd": 0.556758,
+    "revisions": 1
+  },
+  "skills": {
+    "wst-defect-triage": {
+      "totals": {
+        "input": 67486.0,
+        "output": 23620.0,
+        "total": 67486.0,
+        "cost_usd": 0.556758,
+        "revisions": 1
+      },
+      "revisions": {
+        "R1": {
+          "summary": {
+            "input": 67486,
+            "output": 23620,
+            "total": 67486,
+            "cost_usd": 0.556758
+          },
+          "delta": {
+            "input": 67486,
+            "output": 23620,
+            "total": 67486,
+            "cost_usd": 0.556758
+          },
+          "cumulative": {
+            "input": 67486,
+            "output": 23620,
+            "total": 67486,
+            "cost_usd": 0.556758
+          },
+          "baseline": null,
+          "breakdown": {
+            "context_window": 67486,
+            "transcript_tokens": 17596,
+            "estimation_model": "v2",
+            "workspace_rules": 34990,
+            "tool_definitions": 8900,
+            "user_prompts": 17596,
+            "assistant_responses": 0,
+            "tool_call_inputs": 0,
+            "tool_results_estimated": 0,
+            "tool_call_overhead": 0,
+            "skills_loaded": 0,
+            "file_search_reads": 0,
+            "code_edits": 0,
+            "shell_terminal": 0,
+            "orchestration": 0,
+            "static_context": {
+              "Workspace Rules": 34990,
+              "Tool Definitions": 8900,
+              "System Prompt": 3500,
+              "MCP & Skills Catalog": 2500
+            }
+          },
+          "tools": {},
+          "metadata": {
+            "model": "composer-2.5",
+            "timestamp": "2026-08-11T12:47:46.247031",
+            "source": "session_full",
+            "user_turns": 1,
+            "agent_turns": 0,
+            "tool_calls": 0,
+            "conversation_id": "7e65a328-f32a-4f76-beb5-a182b709a77d",
+            "author": "himaanshi-sharma",
+            "transcript_lines": 1
+          }
+        }
+      }
+    }
+  }
+}
