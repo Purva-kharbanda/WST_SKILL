@@ -1,0 +1,30 @@
+{
+  "attachments": {
+    "1786470740946237": {
+      "bytes_written": 11277,
+      "created": "2026-08-11T23:22:20.946243",
+      "filename": "WFM-141456_handoff.md",
+      "local_path": "handoffs/WFM-141456/WFM-141456_handoff.md",
+      "sha256": "4ea168cc89acdd3e42db6d19abb1c8ebb588b6e28e30d6b11f4d5e4ac06861b9",
+      "size": 11277,
+      "skill": "wst-defect-triage",
+      "revision": "R1",
+      "last_updated": "2026-08-11T23:22:20.946310",
+      "update_history": [
+        {
+          "skill": "wst-defect-triage",
+          "revision": "R1",
+          "timestamp": "2026-08-11T23:22:20.946240"
+        }
+      ]
+    }
+  },
+  "key": "WFM-141456",
+  "label_added_iso": null,
+  "labels": [
+    "WST_SKILL_BASED"
+  ],
+  "status": "",
+  "summary": "ESS AWL console 422 + CSS 404 + ui-bootstrap TypeError — LOS AuthParam gap suspected",
+  "updated": "2026-08-11T23:22:20.946218"
+}
