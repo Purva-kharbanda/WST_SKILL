@@ -4,7 +4,7 @@
 
 <!-- SKILL_SECTION: wst-defect-triage R1 -->
 ## TRIAGE (R1)
-*Updated: 2026-08-11 23:22*
+*Updated: 2026-08-11 23:32*
 
 ---
 id: WFM-141456
@@ -12,7 +12,7 @@ summary: "ESS Alternate Work Location page — console 422 errors on add/edit, m
 verdict: GENUINE_BUG
 confidence: MEDIUM
 step_reached: KB_STEP2
-input_form: jira_json
+input_form: jira_api_hook
 module: Employee Self-Service
 customer: REFLEXIS
 flavour: null
@@ -24,14 +24,14 @@ next_owner: L3-Engineering
 sla: P3-next-sprint
 status: Draft
 version: R1
-generated: "2026-08-11T17:50:00+05:30"
-last_updated: "2026-08-11T17:50:00+05:30"
-duration_minutes: 12
+generated: "2026-08-11T23:30:00+05:30"
+last_updated: "2026-08-11T23:30:00+05:30"
+duration_minutes: 14
 model: composer-2.5
 skill_version: "2.2.0"
 attachments_read:
-  - { source: jira, filename: "image-2026-07-21-16-35-14-401.png", type: read }
-  - { source: jira, filename: "screenshot-1.png", type: read }
+  - { source: jira, filename: "image-2026-07-21-16-35-14-401.png", type: skipped }
+  - { source: jira, filename: "screenshot-1.png", type: skipped }
 fix_primary: web
 channels_mobile: false
 channels_web: true
@@ -82,7 +82,7 @@ implicated_areas_count: 4
 
 ## Prior analysis critique
 
-No prior analysis present in input.
+No prior L1/L2/L3 analysis in Jira comments. Linked dev story WFM-143280 mirrors summary but has no technical root-cause yet.
 
 ---
 
@@ -90,7 +90,7 @@ No prior analysis present in input.
 
 - **Symptom:** Associate on ESS Alternate Work Locations sees browser console errors when adding/editing/deleting requests; on productqa06 POST calls fail with **422 (Undefined)**; INTQA02 shows success banner but page goes blank with **`m.$isEmpty is not a function`**.
 - **Fault:** `(primary)` `ESSController.updateShareRequestDetail` — `@AuthParam` omits `EFFECTIVE_DATE_SKEY` / `END_DATE_SKEY` (and `IS_FROM_ESS`) while `addShareRequest` includes them; `(secondary)` `WebContent/css/isteven-multi-select.css:109` — background URL missing `DEFAULT/` segment; `(tertiary)` ui-bootstrap datepicker/tooltip stack on roster path expects `ngModel.$isEmpty`.
-- **Trigger:** Save/edit on Alternate Work Location details POSTs to sharerequests endpoints; LOS dispatcher binds incomplete key-set → `CrossUnitDomainResolver.resolveCrossDomainOperationBasedOnCriteria` evaluates with eff/end skey 0 → throws → HTTP 422. CSS loads on multi-select unit picker. Post-update navigation to roster invokes deprecated ui-bootstrap path.
+- **Trigger:** Save/edit on Alternate Work Location details POSTs to sharerequests endpoints; LOS dispatcher binds incomplete key-set → `CrossUnitDomainResolver` evaluates with eff/end skey 0 or wrong overload → throws → HTTP 422. CSS loads on multi-select unit picker. Post-update navigation to roster invokes deprecated ui-bootstrap path.
 - **Consequence:** Add/edit appears to fail silently in UI (Angular error handler gets undefined body); console noise flagged under security QA label; secondary JS error can blank roster view after apparent success.
 - **What raises to HIGH:** Paste Network-tab **422 response JSON** (message text) from wfmproductqa06 repro; confirm whether message is LOS ("Please check the units…") vs business validation (`rws.share.*`).
 
@@ -112,7 +112,7 @@ Compare `addShareRequest` (working pattern) vs detail endpoints:
 @AuthParam("{REQUEST_NO:requestNo,MAPPING_NO:mappingNo,UNIT_ID:unitId}")
 ```
 
-**Action:** Extend `@AuthParam` on `updateShareRequestDetail`, `updateShareRequestDetailsWithEmpStatDate`, and `addShareRequestDetail` to include `EFFECTIVE_DATE_SKEY` and `END_DATE_SKEY` extracted from list body (mirror nested binding used on add). Add `IS_FROM_ESS:true` on ESS-only mutating endpoints for session personId guard in `CrossUnitDomainResolver.resolveCrossDomainOperationBasedShareObj` (line ~921).
+**Action:** Extend `@AuthParam` on `updateShareRequestDetail`, `updateShareRequestDetailsWithEmpStatDate`, and `addShareRequestDetail` to include `EFFECTIVE_DATE_SKEY` and `END_DATE_SKEY` extracted from list body (mirror nested binding used on add). Add `IS_FROM_ESS:true` on ESS-only mutating endpoints for session personId guard in `CrossUnitDomainResolver.resolveCrossDomainOperationBasedShareObj`.
 
 **Where:** `RWS4/src/com/reflexis/rws/v5/controller/ESSController.java` (~3670–3747); validate overload dispatch in `CrossUnitDomainResolver.java` (~920–990).
 
@@ -159,13 +159,13 @@ Compare `addShareRequest` (working pattern) vs detail endpoints:
 
 ## Evidence trail
 
-**KB citations:** test-scenarios.md (ESS Alternate Work Location — no SIT/BAT coverage); release_notes_registry RNI-0141 (Criteria Configuration Warning for Alternate Work Requests — adjacent, not direct fix).
+**KB citations:** test-scenarios.md (ESS Alternate Work Location — no SIT/BAT coverage); release_notes_registry RNI-0141 (Criteria Configuration Warning for Alternate Work Requests — adjacent WEAK, not direct fix).
 
 **Code citations:**
 - `ESSController.java:addShareRequest` — full AuthParam with `IS_FROM_ESS:true` (~3673–3675)
 - `ESSController.java:updateShareRequestDetail` — incomplete AuthParam (~3733–3738)
 - `CrossUnitDomainResolver.java:resolveCrossDomainOperationBasedShareObj` — ESS session guard (~921–926) and criteria unit check (~988–990)
-- `DefaultRestController.java` — HTTP 422 for business exceptions (~146–151)
+- `DefaultRestController.java` — HTTP 422 for business exceptions (~146)
 - `isteven-multi-select.css:109` — wrong image path
 - `employee.share.actions.js:updateShareRequestDetail` — POST body is detail list (~167–170)
 
@@ -173,14 +173,14 @@ Compare `addShareRequest` (working pattern) vs detail endpoints:
 
 | Layer | Status | Confidence | Evidence |
 |-------|--------|------------|----------|
-| client_emission | checked-clear | MEDIUM | 422 is server response; payload includes standard share detail fields in screenshot |
+| client_emission | checked-clear | MEDIUM | Client posts standard detail list; 422 is server response |
 | server_api | implicated | HIGH | 422 on documented REST endpoints |
-| los_auth | implicated | MEDIUM | AuthParam key-set mismatch vs add endpoint |
+| los_auth | implicated | MEDIUM | AuthParam key-set mismatch vs add endpoint (los-key-drift R2) |
 | config_data | possible | LOW | Criteria could reject unit; needs Q2 |
-| static_asset | implicated | HIGH | 404 `innercontainer-expand.png` in screenshot |
+| static_asset | implicated | HIGH | 404 `innercontainer-expand.png` per ticket |
 | ui_framework | implicated | MEDIUM | `$isEmpty` TypeError on INTQA02 screenshot only |
 
-**Attachments read:** jira:image-2026-07-21-16-35-14-401.png (read); jira:screenshot-1.png (read)
+**Attachments read:** jira:image-2026-07-21-16-35-14-401.png (skipped — not downloaded locally); jira:screenshot-1.png (skipped — not downloaded locally)
 
 **Skipped layers:** sws_zta, rflx-wfm-shiftbuilding, rflx-wfm-frameworkscheduling, rflx-wfm-scheduling — not in workspace (optional; not implicated).
 
@@ -191,7 +191,8 @@ Compare `addShareRequest` (working pattern) vs detail endpoints:
 ### Confidence flags
 
 - [INFO: Step 2 included WebContent client-emission layer — 422 confirmed server-side before back-end walk]
-- [INFO: TER skipped — Jira attachment screenshots provided console/network evidence equivalent to TER paste-back]
+- [INFO: DBSCRIPTS_ROOT and I18N_ROOT not in workspace — Step 2 limited to SERVER_ROOT]
+- [WARN: Jira attachment PNGs not present under jira-intake/attachments — console evidence inferred from ticket description + prior export]
 - [WARN: 422 exact exception message not captured — confidence capped at MEDIUM until Q1 answered]
 
 ### Refinement log
