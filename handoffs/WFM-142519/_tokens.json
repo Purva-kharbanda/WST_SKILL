@@ -1,0 +1,91 @@
+{
+  "ticket_id": "WFM-142519",
+  "updated": "2026-08-11T11:29:38.616857",
+  "pricing": {
+    "input_per_1m_usd": 3.0,
+    "output_per_1m_usd": 15.0
+  },
+  "totals": {
+    "input": 19323.0,
+    "output": 1818.0,
+    "total": 21141.0,
+    "cost_usd": 0.085239,
+    "revisions": 1
+  },
+  "skills": {
+    "wst-defect-triage": {
+      "totals": {
+        "input": 19323.0,
+        "output": 1818.0,
+        "total": 21141.0,
+        "cost_usd": 0.085239,
+        "revisions": 1
+      },
+      "revisions": {
+        "R1": {
+          "summary": {
+            "input": 19323,
+            "output": 1818,
+            "total": 21141,
+            "cost_usd": 0.085239
+          },
+          "delta": {
+            "input": 19323,
+            "output": 1818,
+            "total": 21141,
+            "cost_usd": 0.085239
+          },
+          "cumulative": {
+            "input": 19323,
+            "output": 1818,
+            "total": 21141,
+            "cost_usd": 0.085239
+          },
+          "baseline": null,
+          "breakdown": {
+            "user_prompts": 17650,
+            "assistant_responses": 1818,
+            "skills_loaded": 0,
+            "file_search_reads": 945,
+            "code_edits": 500,
+            "shell_terminal": 228,
+            "orchestration": 0
+          },
+          "tools": {
+            "Read": {
+              "calls": 18,
+              "tokens": 486
+            },
+            "Grep": {
+              "calls": 9,
+              "tokens": 324
+            },
+            "Glob": {
+              "calls": 5,
+              "tokens": 135
+            },
+            "Shell": {
+              "calls": 3,
+              "tokens": 228
+            },
+            "Write": {
+              "calls": 1,
+              "tokens": 500
+            }
+          },
+          "metadata": {
+            "model": "composer-2.5-fast",
+            "timestamp": "2026-08-11T11:29:38.616885",
+            "source": "session_full",
+            "user_turns": 3,
+            "agent_turns": 15,
+            "tool_calls": 36,
+            "conversation_id": "ee756096-6a75-459b-906f-3527c0bdb816",
+            "author": "himaanshi-sharma",
+            "transcript_lines": 20
+          }
+        }
+      }
+    }
+  }
+}
