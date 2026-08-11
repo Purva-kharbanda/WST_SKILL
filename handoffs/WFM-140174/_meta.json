@@ -1,15 +1,15 @@
 {
   "attachments": {
     "1786432664815778": {
-      "bytes_written": 17103,
+      "bytes_written": 18005,
       "created": "2026-08-11T12:47:44.815787",
       "filename": "WFM-140174_handoff.md",
       "local_path": "handoffs/WFM-140174/WFM-140174_handoff.md",
-      "sha256": "495932f1a168c839da0fc39e1ce5a39370578e81260089f1aa1ff96b950ef43d",
-      "size": 17103,
-      "skill": "wst-defect-triage",
-      "revision": "R2",
-      "last_updated": "2026-08-11T12:51:34.905508",
+      "sha256": "fdf40ef34c1877d56a361a041780f883ad1cd73dbd516191c15e7e6c6adbf3ec",
+      "size": 18005,
+      "skill": "wst-defect-fix",
+      "revision": "A1",
+      "last_updated": "2026-08-11T13:08:53.609023",
       "update_history": [
         {
           "skill": "wst-defect-triage",
@@ -20,6 +20,11 @@
           "skill": "wst-defect-triage",
           "revision": "R2",
           "timestamp": "2026-08-11T12:51:34.905295"
+        },
+        {
+          "skill": "wst-defect-fix",
+          "revision": "A1",
+          "timestamp": "2026-08-11T13:08:53.608907"
         }
       ]
     }
@@ -30,6 +35,6 @@
     "WST_SKILL_BASED"
   ],
   "status": "",
-  "summary": "WFM-140174 Forecast Review dept filter — R2: WFM-109065 is main bug, not duplicate",
-  "updated": "2026-08-11T12:51:34.905258"
+  "summary": "Fix applied: skeleton fallback honours department filter in DefaultDriverForecastReviewService",
+  "updated": "2026-08-11T13:08:53.608884"
 }

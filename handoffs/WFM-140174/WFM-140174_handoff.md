@@ -334,3 +334,26 @@ model: composer-2.5
 **Original input:** [NOT APPLICABLE — Jira API intake]
 
 <!-- /SKILL_SECTION -->
+
+<!-- SKILL_SECTION: wst-defect-fix A1 -->
+## FIX (A1)
+*Updated: 2026-08-11 13:08*
+
+# WFM-140174 — Apply Fix A1
+
+**Applied:** suggestions [1] + [2] from triage handoff R2
+
+**File changed:**
+- `src/com/reflexis/predictive/v5/service/workerimpl/DefaultDriverForecastReviewService.java`
+
+**Changes:**
+1. `getReviewForecastDataSkeleton` — resolve `filterdeptSkeys` from department filter; restrict `metricDetails` to mapped departments (mirrors main path ~757–796).
+2. Both skeleton dept loops (STORE_GROUP + store) — intersect `metricDeptSkeys` with `filterdeptSkeys` before emitting rows.
+
+**Expected:** When department filter is active and PRE_METRIC returns no rows, skeleton fallback shows only selected departments (not all driver-mapped depts).
+
+**Next:** Run `/capture-fix WFM-140174` to record Fix stage in envelope.
+
+**Track under:** WFM-109065 (main bug ticket)
+
+<!-- /SKILL_SECTION -->
